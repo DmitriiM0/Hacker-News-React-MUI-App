@@ -1,12 +1,12 @@
 import { Commentary } from '../../types';
-import { Box, } from '@mui/material';
+import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import Comment from './Comment';
 
 export default function DeepComments({ deepComments }: any) {
   return deepComments.map((comment: Commentary) => (
-    <Box>
+    <Box key={comment.id}>
       <Box>
         <Box sx={{ my: 3, gap: 1 }} display="flex" flexDirection={'column'}>
           <Box display="flex" alignItems="center">

@@ -25,7 +25,6 @@ export default function Comment({ comment }: any) {
       let deepCommentResponse = await Promise.all(
         deepCommentPromises as Commentary[]
       );
-      console.log(deepCommentResponse);
       setDeepComments(deepCommentResponse);
     }
     fetchStoryList();
@@ -35,7 +34,7 @@ export default function Comment({ comment }: any) {
     <Box>
       <Button
         variant="text"
-		sx={{pl: {xs: 0, md: 1}}}
+        sx={{ pl: { xs: 0, md: 1 } }}
         onClick={() => {
           setIsOpen(!isOpen);
         }}

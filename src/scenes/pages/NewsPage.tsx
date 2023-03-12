@@ -132,7 +132,6 @@ export default function NewsPage() {
               <Button
                 variant="contained"
                 href={`${story.url}`}
-                onClick={() => console.log(`${story.url}`)}
                 size="small"
                 sx={{
                   borderRadius: 4,
