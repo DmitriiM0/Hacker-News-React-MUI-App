@@ -21,10 +21,9 @@ export default function Navbar() {
               Hacker News
             </Typography>
             <Box
-              display={'flex'}
               justifyContent={'space-between'}
               alignItems={'center'}
-              sx={{ columnGap: 4, display: 'none' }}
+              sx={{ columnGap: 4, display: { xs: 'none', md: 'flex' } }}
             >
               <Typography variant="body2">New</Typography>
               <Typography variant="body2">Past</Typography>
@@ -35,7 +34,7 @@ export default function Navbar() {
           </Box>
         </Container>
       </AppBar>
-      <Container maxWidth="md" sx={{ py: {xs: 2, md: 4} }}>
+      <Container maxWidth="md" sx={{ py: { xs: 2, md: 4 } }}>
         <Outlet />
       </Container>
     </ThemeProvider>
