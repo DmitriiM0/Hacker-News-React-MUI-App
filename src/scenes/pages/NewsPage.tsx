@@ -156,7 +156,7 @@ export default function NewsPage() {
           sx={{ mt: 3, color: '#777' }}
         >
           <Typography variant="subtitle2" alignSelf="center">
-            {commentList.length === 0 ? 'NO COMMENTS' : 'COMMENTS'}
+            {story.descendants === 0 ? 'NO COMMENTS' : 'COMMENTS'}
           </Typography>
           <Button
             variant="outlined"
