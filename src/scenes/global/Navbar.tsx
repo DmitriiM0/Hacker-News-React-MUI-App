@@ -24,7 +24,7 @@ export default function Navbar() {
               display={'flex'}
               justifyContent={'space-between'}
               alignItems={'center'}
-              sx={{ columnGap: 4 }}
+              sx={{ columnGap: 4, display: 'none' }}
             >
               <Typography variant="body2">New</Typography>
               <Typography variant="body2">Past</Typography>
@@ -35,7 +35,7 @@ export default function Navbar() {
           </Box>
         </Container>
       </AppBar>
-      <Container maxWidth="md" sx={{ py: 4 }}>
+      <Container maxWidth="md" sx={{ py: {xs: 2, md: 4} }}>
         <Outlet />
       </Container>
     </ThemeProvider>

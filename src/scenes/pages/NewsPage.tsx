@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { Story, Commentary } from '../../types';
 import Button from '@mui/material/Button';
-import { Box, Skeleton } from '@mui/material';
+import { Box, Skeleton, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
@@ -94,12 +94,14 @@ export default function NewsPage() {
           <Typography variant="h4" component="h1" sx={{ width: 0.9 }}>
             {story.title}
           </Typography>
-          <Box display="flex" justifyContent="space-between">
-            <Box
+          <Grid container display="flex" justifyContent="space-between">
+            <Grid
+              item
+              xs={12}
+              md={8}
               display="flex"
-              justifyContent="space-between"
               alignContent="center"
-              sx={{ columnGap: 2 }}
+              sx={{ columnGap: 2, justifyContent: { xs: 'start' } }}
             >
               <Box display="flex" alignItems="center">
                 <StarRoundedIcon sx={{ color: '#ffb200', mr: 0.5 }} />
@@ -125,20 +127,27 @@ export default function NewsPage() {
                 <CommentRoundedIcon sx={{ color: '#555', mr: 1 }} />
                 <Typography variant="subtitle2">{story.descendants}</Typography>
               </Box>
-            </Box>
-            <Button
-              variant="contained"
-              href={`${story.url}`}
-              onClick={() => console.log(`${story.url}`)}
-              size="small"
-              sx={{ borderRadius: 4, px: 2 }}
-              target="_blank"
-              color="warning"
-              startIcon={<OpenInNewOutlinedIcon />}
-            >
-              Go to Source
-            </Button>
-          </Box>
+            </Grid>
+            <Grid item xs={12} md={4} display="flex" justifyContent="end">
+              <Button
+                variant="contained"
+                href={`${story.url}`}
+                onClick={() => console.log(`${story.url}`)}
+                size="small"
+                sx={{
+                  borderRadius: 4,
+                  px: 2,
+                  width: { xs: 1, md: '19ch' },
+                  mt: { xs: 2, md: 0 },
+                }}
+                target="_blank"
+                color="warning"
+                startIcon={<OpenInNewOutlinedIcon />}
+              >
+                Go to Source
+              </Button>
+            </Grid>
+          </Grid>
         </Box>
         <Divider flexItem color="#666" />
         <Box

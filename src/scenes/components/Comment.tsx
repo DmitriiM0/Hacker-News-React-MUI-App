@@ -35,6 +35,7 @@ export default function Comment({ comment }: any) {
     <Box>
       <Button
         variant="text"
+		sx={{pl: {xs: 0, md: 1}}}
         onClick={() => {
           setIsOpen(!isOpen);
         }}

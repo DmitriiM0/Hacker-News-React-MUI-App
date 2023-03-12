@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 import { useNavigate } from 'react-router-dom';
-import { Typography } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import { Story } from '../../types';
 import { HackerNewsContext, DispatchContext } from '../../context';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
@@ -116,10 +116,10 @@ export default function NewsList() {
             key={story.id}
             sx={{
               textAlign: 'left',
-              py: 2,
+              py: { xs: 2, md: 2 },
               px: 3,
               my: 1,
-              borderRadius: 4,
+              borderRadius: { xs: 3, md: 4 },
               backgroundColor: '#24282B',
               color: '#D9D9D9',
             }}
@@ -140,12 +140,15 @@ export default function NewsList() {
             <Typography variant="body1" py={1}>
               {story.title}
             </Typography>
-            <Box display="flex" justifyContent="space-between">
-              <Box
+            <Grid container display="flex" justifyContent="space-between">
+              <Grid
+                item
+                xs={12}
+                md={8}
                 display="flex"
-                justifyContent="space-between"
+                // justifyContent="space-between"
                 alignContent="center"
-                sx={{ columnGap: 2 }}
+                sx={{ columnGap: 2, justifyContent: { xs: 'start' } }}
               >
                 <Box display="flex" alignItems="center">
                   <StarRoundedIcon sx={{ color: '#ffb200', mr: 0.5 }} />
@@ -163,21 +166,32 @@ export default function NewsList() {
                   <AccountCircleRoundedIcon sx={{ color: '#555', mr: 1 }} />
                   <Typography variant="subtitle2">{story.by}</Typography>
                 </Box>
-              </Box>
-              <Button
-                variant="contained"
-                disableElevation
-                onClick={() => {
-                  navigate(`/${story.id}`);
-                }}
-                endIcon={<ArrowForwardIosRoundedIcon />}
-                size="small"
-                sx={{ borderRadius: 4, px: 2 }}
-                color="warning"
-              >
-                Open
-              </Button>
-            </Box>
+              </Grid>
+              <Grid item xs={12} md={3} display="flex" justifyContent="end">
+                <Button
+                  variant="contained"
+                  disableElevation
+                  onClick={() => {
+                    navigate(`/${story.id}`);
+                  }}
+                  endIcon={
+                    <ArrowForwardIosRoundedIcon
+                      sx={{ display: { xs: 'none', md: 'block' } }}
+                    />
+                  }
+                  size="small"
+                  sx={{
+                    borderRadius: 4,
+                    px: 2,
+                    width: { xs: 1, md: '10ch' },
+                    mt: { xs: 2, md: 0 },
+                  }}
+                  color="warning"
+                >
+                  Open
+                </Button>
+              </Grid>
+            </Grid>
           </Box>
         ))
       ) : (
