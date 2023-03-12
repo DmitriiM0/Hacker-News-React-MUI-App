@@ -172,7 +172,7 @@ export default function NewsList() {
                   variant="contained"
                   disableElevation
                   onClick={() => {
-                    navigate(`/${story.id}`);
+                    navigate(`/Hacker-News-React-MUI-App/${story.id}`);
                   }}
                   endIcon={
                     <ArrowForwardIosRoundedIcon

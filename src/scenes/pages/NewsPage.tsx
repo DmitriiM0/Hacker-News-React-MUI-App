@@ -83,7 +83,7 @@ export default function NewsPage() {
             </Typography>
             <Button
               variant="outlined"
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/Hacker-News-React-MUI-App/')}
               size="small"
               sx={{ borderRadius: 4, px: 2 }}
               color="warning"
@@ -171,7 +171,7 @@ export default function NewsPage() {
         </Box>
         {commentList.length !== 0 ? (
           <CommentSection comments={commentList} />
-        ) : story.kids === undefined ? null : (
+        ) : story?.kids === undefined ? null : (
           <Skeleton
             variant="rectangular"
             height={'80vh'}

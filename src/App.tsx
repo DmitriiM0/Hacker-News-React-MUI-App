@@ -30,7 +30,7 @@ const initialState: HackerNews = {
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Hacker-News-React-MUI-App/',
     element: <Navbar />,
     errorElement: <ErrorBoundary />,
 
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <NewsList />,
       },
       {
-        path: ':storyId',
+        path: '/Hacker-News-React-MUI-App/:storyId',
         element: <NewsPage />,
         loader: async ({ params }) => {
           const { data } = await axios.get(
