@@ -2,7 +2,7 @@
 This is a simple MPA built with React, Vite, Material UI and React-Router-Dom v6. The app fetches news, posts and comments from the Hacker News API. The app first fetches the latest 100 news and then makes more requests to get the data for specified ids.
 
 # Installation
-1. Clone the repository: git clone https://github.com/YOUR_USERNAME/hacker-news-react-app.git
+1. Clone the repository: git clone https://github.com/dmitriim0/hacker-news-react-app.git
 2. Navigate to the project directory: cd hacker-news-react-app
 3. Install the dependencies: Inline 'npm install'
 
