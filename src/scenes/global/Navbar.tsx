@@ -1,10 +1,15 @@
-import AppBar from '@mui/material/AppBar';
-import { Typography, Box } from '@mui/material';
-import Container from '@mui/material/Container';
 import { Outlet } from 'react-router-dom';
-import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../../theme';
 import { ThemeProvider } from '@mui/material/styles';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import {
+  AppBar,
+  Typography,
+  Box,
+  Container,
+  CssBaseline,
+  IconButton,
+} from '@mui/material';
 
 export default function Navbar() {
   return (
@@ -15,6 +20,7 @@ export default function Navbar() {
           <Box
             display={'flex'}
             justifyContent={'space-between'}
+            alignItems="center"
             color="#D9D9D9"
           >
             <Typography variant="h6" sx={{ py: 2 }}>
@@ -31,6 +37,12 @@ export default function Navbar() {
               <Typography variant="body2">Ask</Typography>
               <Typography variant="body2">Show</Typography>
             </Box>
+            <IconButton
+              disableRipple
+              sx={{ display: { xs: 'block', md: 'none' }, color: '#D9D9D9' }}
+            >
+              <MenuRoundedIcon fontSize="medium" />
+            </IconButton>
           </Box>
         </Container>
       </AppBar>

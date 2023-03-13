@@ -1,11 +1,11 @@
 import { useReducer } from 'react';
+import { HackerNewsContext, DispatchContext } from './context';
+import { HackerNews } from './types';
+import reducer from './reducer';
 import axios from 'axios';
 import NewsList from './scenes/pages/NewsList';
 import NewsPage from './scenes/pages/NewsPage';
 import Navbar from './scenes/global/Navbar';
-import reducer from './reducer';
-import { HackerNews } from './types';
-import { HackerNewsContext, DispatchContext } from './context';
 import {
   createBrowserRouter,
   RouterProvider,

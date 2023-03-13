@@ -1,10 +1,7 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Commentary } from '../../types';
-import Button from '@mui/material/Button';
-import { Box } from '@mui/material';
-import Divider from '@mui/material/Divider';
-import Collapse from '@mui/material/Collapse';
+import axios from 'axios';
+import { Button, Box, Collapse, Divider } from '@mui/material';
 import DeepComments from './DeepComments';
 
 export default function Comment({ comment }: any) {

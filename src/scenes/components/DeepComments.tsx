@@ -1,6 +1,5 @@
 import { Commentary } from '../../types';
-import { Box } from '@mui/material';
-import Typography from '@mui/material/Typography';
+import { Typography, Box } from '@mui/material';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import Comment from './Comment';
 

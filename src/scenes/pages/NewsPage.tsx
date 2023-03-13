@@ -1,19 +1,22 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { HackerNewsContext } from '../../context';
-import { useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import { HackerNewsContext } from '../../context';
 import { Story, Commentary } from '../../types';
-import Button from '@mui/material/Button';
-import { Box, Skeleton, Grid } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
+import CommentSection from '../components/CommentSection';
+import axios from 'axios';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import CommentRoundedIcon from '@mui/icons-material/CommentRounded';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import LoopIcon from '@mui/icons-material/Loop';
-import CommentSection from '../components/CommentSection';
+import {
+  Button,
+  Box,
+  Skeleton,
+  Typography,
+  Grid,
+  Divider,
+} from '@mui/material';
 
 export default function NewsPage() {
   const [forceUpdate, setForceUpdate] = useState(false);
@@ -54,7 +57,7 @@ export default function NewsPage() {
         sx={{
           textAlign: 'left',
           px: 4,
-          pb: 1,
+          pb: 3,
           my: 1,
           borderRadius: 4,
           backgroundColor: '#24282B',

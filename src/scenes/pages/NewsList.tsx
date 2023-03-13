@@ -1,17 +1,20 @@
 import { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Skeleton from '@mui/material/Skeleton';
-import { useNavigate } from 'react-router-dom';
-import { Typography, Grid } from '@mui/material';
-import { Story } from '../../types';
 import { HackerNewsContext, DispatchContext } from '../../context';
+import { useNavigate } from 'react-router-dom';
+import { Story } from '../../types';
+import axios from 'axios';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import Divider from '@mui/material/Divider';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import LoopIcon from '@mui/icons-material/Loop';
+import {
+  Button,
+  Box,
+  Skeleton,
+  Typography,
+  Grid,
+  Divider,
+} from '@mui/material';
 
 export default function NewsList() {
   const hackerNews = useContext(HackerNewsContext);
