@@ -96,10 +96,10 @@ export default function NewsList() {
         mb={2}
       >
         <Typography
-          variant="h3"
-          component={'h1'}
+          variant="h1"
           color="#fff"
           fontWeight="bold"
+          sx={{ fontSize: { xs: 25, md: '2rem'} }}
         >
           THE NEWS
         </Typography>
