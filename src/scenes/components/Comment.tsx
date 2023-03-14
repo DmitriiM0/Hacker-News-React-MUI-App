@@ -19,9 +19,8 @@ export default function Comment({ comment }: any) {
         )
       );
 
-      let deepCommentResponse = await Promise.all(
-        deepCommentPromises as Commentary[]
-      );
+      let deepCommentResponse: Awaited<Promise<Commentary[]>> =
+        await Promise.all(deepCommentPromises);
       setDeepComments(deepCommentResponse);
     }
     fetchStoryList();

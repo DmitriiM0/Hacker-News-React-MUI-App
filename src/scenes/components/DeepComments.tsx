@@ -3,7 +3,12 @@ import { Typography, Box } from '@mui/material';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import Comment from './Comment';
 
-export default function DeepComments({ deepComments }: any) {
+interface PropTypes {
+  children?: React.ReactNode;
+  deepComments: Commentary[];
+}
+
+export default function DeepComments({ deepComments }: PropTypes): any {
   return deepComments.map((comment: Commentary) => (
     <Box key={comment.id}>
       <Box>

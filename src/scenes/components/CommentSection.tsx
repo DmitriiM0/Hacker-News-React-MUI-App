@@ -1,9 +1,9 @@
 import Comment from './Comment';
-import { Commentary } from '../../types';
-import {Typography, Box} from '@mui/material';
+import { Commentary, PropTypes } from '../../types';
+import { Typography, Box } from '@mui/material';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 
-export default function CommentSection({ comments }: any) {
+export default function CommentSection({ comments }: PropTypes): any {
   return comments.map((comment: Commentary) => (
     <Box
       key={comment.id}

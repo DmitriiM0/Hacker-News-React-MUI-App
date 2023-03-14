@@ -30,3 +30,8 @@ export interface Commentary {
   time: number;
   type: string;
 }
+
+export interface PropTypes {
+  children?: React.ReactNode;
+  comments: Commentary[];
+}
